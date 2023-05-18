@@ -1,5 +1,5 @@
 let countdownElement = document.getElementById("countdown");
-let countdown = 10;
+let countdown = 5;
 let countdownTimer;
 
 function startCountdown() {
