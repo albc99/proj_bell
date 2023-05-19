@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f4f4f4;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .rectangle {
+      width: 200px;
+      height: 100px;
+      margin: 10px;
+      border-radius: 10px; /* Rounded edges */
+      background-color: #4CAF50; /* Green color */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 16px;
+      font-weight: bold;
+      color: #ffffff; /* White text color */
+    }
+  </style>
+  <script>
+    function showNotification() {
+      var notification = document.createElement("div");
+      notification.innerHTML = "Someone will be there shortly";
+      notification.style.position = "fixed";
+      notification.style.top = "50%";
+      notification.style.left = "50%";
+      notification.style.transform = "translate(-50%, -50%)";
+      notification.style.backgroundColor = "#ffffff";
+      notification.style.padding = "20px";
+      notification.style.borderRadius = "10px";
+      notification.style.boxShadow = "0 0 10px rgba(0, 0, 0, 0.2)";
+      notification.style.zIndex = "9999";
+      document.body.appendChild(notification);
+
+      setTimeout(function() {
+        notification.remove();
+      }, 5000);
+    }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <a href="menu.html" class="rectangle">Menu</a>
+    <div class="rectangle" onclick="showNotification()">Water Refill</div>
+    <div class="rectangle" onclick="showNotification()">Check Please</div>
+    <div class="rectangle" onclick="showNotification()">Take Dishes Away</div>
+    <div class="rectangle" onclick="showNotification()">Call the Server</div>
+  </div>
+</body>
+</html>
